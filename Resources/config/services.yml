@@ -8,7 +8,6 @@ services:
     OGM.manager.factory:
         class: GensDeConfiance\Neo4jOGMManagerBundle\Factory\OGMManagerFactory
 
-    # Image handling factory
     OGM.manager:
         class: GraphAware\Neo4j\OGM\EntityManager
         factory: ['@OGM.manager.factory', createEntityManager]

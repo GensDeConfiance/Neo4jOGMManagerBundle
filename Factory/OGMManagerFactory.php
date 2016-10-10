@@ -1,6 +1,6 @@
 <?php
 
-namespace GensDeConfiance\Neo4jOGMManagerBundle;
+namespace GensDeConfiance\Neo4jOGMManagerBundle\Factory;
 
 use GraphAware\Neo4j\OGM\EntityManager;
 
