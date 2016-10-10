@@ -28,3 +28,10 @@ new GensDeConfiance\Neo4jOGMManagerBundle\Neo4jOGMManagerBundle(),
 ````
 $em = $this->container->get('neo4j.manager');
 ````
+
+## Using the bolt protocol
+The bolt protocol neead the [bcmod()](http://php.net/manual/fr/function.bcmod.php) PHP function.
+For php7, you have to install the php-bcmath package:
+``` bash
+$ sudo apt-get install php-bcmath
+```
