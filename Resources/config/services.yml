@@ -1,0 +1,19 @@
+parameters:
+    OGM.database_host: 127.0.0.1
+    OGM.database_port: 7474
+    OGM.database_user: neo4j
+    OGM.database_password: neo4j
+
+services:
+    OGM.manager.factory:
+        class: GensDeConfiance\Neo4jOGMManagerBundle\Factory\OGMManagerFactory
+
+    # Image handling factory
+    OGM.manager:
+        class: GraphAware\Neo4j\OGM\EntityManager
+        factory: ['@OGM.manager.factory', createEntityManager]
+        arguments:
+          - "%OGM.database_host%"
+          - "%OGM.database_user%"
+          - "%OGM.database_password%"
+          - "%OGM.database_port%"

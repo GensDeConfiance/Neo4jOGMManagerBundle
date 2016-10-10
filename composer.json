@@ -1,0 +1,25 @@
+{
+    "name": "GensDeConfiance/Neo4jOGMManagerBundle",
+    "type": "symfony-bundle",
+    "description": "This Bundle implements the PHP Neo4j OGM",
+    "keywords": ["ogm", "neo4j", "graph database"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gens de Confiance",
+            "homepage": "https://github.com/GensDeConfiance"
+        }
+    ],
+
+    "require": {
+        "php":                      ">=5.3.3",
+        "graphaware/neo4j-php-ogm": "1.0.0-beta19",
+        "symfony/symfony":          ">=3.0"
+    },
+
+    "autoload": {
+        "psr-0": { "GensDeConfiance\\Neo4jOGMManagerBundle": "" }
+    },
+
+    "target-dir": "GensDeConfiance/Neo4jOGMManagerBundle"
+}
