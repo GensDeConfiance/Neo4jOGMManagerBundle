@@ -3,13 +3,12 @@
 
 ## Neo4j OGM
 
-This bundle lets you use the Neo4j Graph Database REST API in your symfony3 applications.
-It loads an "neo4j.manager" service which is a manager for [neo4j-php-ogm](https://github.com/graphaware/neo4j-php-ogm).
+This bundle lets you use the Neo4j Graph Database API in your symfony3 applications.
+It creates an "neo4j.manager" service which is a manager for [neo4j-php-ogm](https://github.com/graphaware/neo4j-php-ogm).
 
 ## Installation :
 ``` bash
 $ composer require GensDeConfiance\Neo4jOGMManagerBundle
-$ composer update
 ```
 
 ## Configuration (app/config/parameters.yml)
