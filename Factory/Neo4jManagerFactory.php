@@ -21,8 +21,7 @@ class Neo4jManagerFactory
         } catch (\Exception $e) {
             $neo4jServer = sprintf('http://%s:%s@%s:%d', $database_user, $database_password, $database_host, $database_http_port);
         }
-        $entityManager = EntityManager::create($neo4jServer);
 
-        return $entityManager;
+        return EntityManager::create($neo4jServer);
     }
 }
