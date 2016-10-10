@@ -22,7 +22,6 @@ class Neo4jManagerFactory
             $neo4jServer = sprintf('http://%s:%s@%s:%d', $database_user, $database_password, $database_host, $database_http_port);
         }
         $entityManager = EntityManager::create($neo4jServer);
-        $entityManager->flush();
 
         return $entityManager;
     }
