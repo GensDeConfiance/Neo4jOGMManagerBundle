@@ -14,8 +14,15 @@ class Neo4jManagerFactory
      *
      * @return EntityManager
      */
-    public function createEntityManager(string $database_host = 'localhost', string $database_user = 'neo4j', string $database_password = 'neo4j', int $database_port = 7474): EntityManager
+    public function createEntityManager(string $database_host = 'localhost', string $database_user = 'neo4j', string $database_password = 'neo4j', int $database_http_port = 7474, int $database_bolt_port = 7687): EntityManager
     {
-        return EntityManager::create(sprintf('http://%s:%s@%s:%d', $database_user, $database_password, $database_host, $database_port));
+        try {
+            $neo4jServer = sprintf('bolt://%s:%s@%s:%d', $database_user, $database_password, $database_host, $database_bolt_port);
+        } catch (\Exception $e) {
+            $neo4jServer = sprintf('http://%s:%s@%s:%d', $database_user, $database_password, $database_host, $database_http_port);
+        }
+        $entityManager = EntityManager::create($neo4jServer);
+
+        return $entityManager;
     }
 }
