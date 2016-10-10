@@ -16,9 +16,9 @@ class Neo4jManagerFactory
      */
     public function createEntityManager(string $database_host = 'localhost', string $database_user = 'neo4j', string $database_password = 'neo4j', int $database_http_port = 7474, int $database_bolt_port = 7687): EntityManager
     {
-        try {
+        if (function_exists('bcmod')) {
             $neo4jServer = sprintf('bolt://%s:%s@%s:%d', $database_user, $database_password, $database_host, $database_bolt_port);
-        } catch (\Exception $e) {
+        } else {
             $neo4jServer = sprintf('http://%s:%s@%s:%d', $database_user, $database_password, $database_host, $database_http_port);
         }
 
