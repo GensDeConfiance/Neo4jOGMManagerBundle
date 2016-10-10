@@ -13,10 +13,11 @@ $ composer require GensDeConfiance\Neo4jOGMManagerBundle
 
 ## Configuration (app/config/parameters.yml)
 ````
-neo4j.database_host: 127.0.0.1
-neo4j.database_port: 7474
-neo4j.database_user: neo4j
-neo4j.database_password: neo4j
+    neo4j.database_host: 127.0.0.1
+    neo4j.database_http_port: 7474
+    neo4j.database_bolt_port: 7687
+    neo4j.database_user: neo4j
+    neo4j.database_password: neo4j
 ````
 
 ## Load the bundle (app/config/AppKernel.php)
