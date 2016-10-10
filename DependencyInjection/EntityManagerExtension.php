@@ -1,6 +1,6 @@
 <?php
 
-namespace GGensDeConfiance\Neo4jOGMManagerBundle\DependencyInjection;
+namespace GensDeConfiance\Neo4jOGMManagerBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

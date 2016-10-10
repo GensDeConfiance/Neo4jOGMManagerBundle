@@ -1,5 +1,4 @@
 # Neo4jOGMBundle
-==================================================
 
 
 ## Neo4j OGM
@@ -22,7 +21,7 @@ OGM.database_password: neo4j
 
 ## Load the bundle (AppKernel.php)
 ````
-new GensDeConfiance\Neo4JOgmManagerBundle\Neo4jOGMManagerBundle(),
+new GensDeConfiance\Neo4jOGMManagerBundle\Neo4jOGMManagerBundle(),
 ````
 
 ## Use it

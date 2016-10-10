@@ -2,7 +2,7 @@
 
 namespace GensDeConfiance\Neo4jOGMManagerBundle;
 
-use GensDeConfiance\Neo4jOGMBundle\DependencyInjection\EntityManagerExtension;
+use GensDeConfiance\Neo4jOGMManagerBundle\DependencyInjection\EntityManagerExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class Neo4jOGMManagerBundle extends Bundle
