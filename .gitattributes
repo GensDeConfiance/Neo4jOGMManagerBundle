@@ -1,0 +1,6 @@
+.editorconfig export-ignore
+.gitignore export-ignore
+.php_cs
+composer.json export-ignore
+LICENSE export-ignore
+README.md export-ignore

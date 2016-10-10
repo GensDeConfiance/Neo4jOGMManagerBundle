@@ -13,8 +13,8 @@ services:
         class: GraphAware\Neo4j\OGM\EntityManager
         factory: ['@neo4j.manager.factory', createEntityManager]
         arguments:
-          - "%neo4j.database_host%"
-          - "%neo4j.database_user%"
-          - "%neo4j.database_password%"
-          - "%neo4j.database_http_port%"
-          - "%neo4j.database_bolt_port%"
+            - "%neo4j.database_host%"
+            - "%neo4j.database_user%"
+            - "%neo4j.database_password%"
+            - "%neo4j.database_http_port%"
+            - "%neo4j.database_bolt_port%"
