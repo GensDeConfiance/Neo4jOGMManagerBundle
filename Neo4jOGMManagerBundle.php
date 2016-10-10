@@ -10,7 +10,7 @@ class Neo4jOGMManagerBundle extends Bundle
     /**
      * @return EntityManagerExtension
      */
-    public function getContainerExtension()
+    public function getContainerExtension() : EntityManagerExtension
     {
         return new EntityManagerExtension();
     }
