@@ -4,7 +4,7 @@ namespace GensDeConfiance\Neo4jOGMManagerBundle\Factory;
 
 use GraphAware\Neo4j\OGM\EntityManager;
 
-class OGMManagerFactory
+class Neo4jManagerFactory
 {
     /**
      * @param string $database_host

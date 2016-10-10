@@ -1,18 +1,18 @@
 parameters:
-    OGM.database_host: 127.0.0.1
-    OGM.database_port: 7474
-    OGM.database_user: neo4j
-    OGM.database_password: neo4j
+    neo4j.database_host: 127.0.0.1
+    neo4j.database_port: 7474
+    neo4j.database_user: neo4j
+    neo4j.database_password: neo4j
 
 services:
-    OGM.manager.factory:
-        class: GensDeConfiance\Neo4jOGMManagerBundle\Factory\OGMManagerFactory
+    neo4j.manager.factory:
+        class: GensDeConfiance\Neo4jOGMManagerBundle\Factory\Neo4jManagerFactory
 
-    OGM.manager:
+    neo4j.manager:
         class: GraphAware\Neo4j\OGM\EntityManager
         factory: ['@OGM.manager.factory', createEntityManager]
         arguments:
-          - "%OGM.database_host%"
-          - "%OGM.database_user%"
-          - "%OGM.database_password%"
-          - "%OGM.database_port%"
+          - "%neo4j.database_host%"
+          - "%neo4j.database_user%"
+          - "%neo4j.database_password%"
+          - "%neo4j.database_port%"
