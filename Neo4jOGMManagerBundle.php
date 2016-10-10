@@ -7,6 +7,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class Neo4jOGMManagerBundle extends Bundle
 {
+    /**
+     * @return EntityManagerExtension
+     */
     public function getContainerExtension()
     {
         return new EntityManagerExtension();
