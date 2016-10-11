@@ -7,7 +7,7 @@ It provides a `neo4j.manager` service which returns a manager for [`neo4j-php-og
 
 ## Install
 ```bash
-$ composer require GensDeConfiance\Neo4jOGMManagerBundle
+$ composer require gens-de-confiance/neo4j-ogm-manager-bundle
 ```
 
 ## Load the bundle
