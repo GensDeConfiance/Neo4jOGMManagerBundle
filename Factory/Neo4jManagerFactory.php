@@ -7,6 +7,10 @@ use GraphAware\Neo4j\OGM\EntityManager;
 
 class Neo4jManagerFactory
 {
+    const BOLT_PROTOCOL = 'bolt';
+
+    const HTTP_PROTOCOL = 'http';
+
     /**
      * @param string $host
      * @param string $user
@@ -16,15 +20,15 @@ class Neo4jManagerFactory
      *
      * @return EntityManager
      */
-    public function createEntityManager(string $host = 'localhost', string $user = 'neo4j', string $password = 'neo4j', int $httpPort = 7474, int $boltPort = BoltDriver::DEFAULT_TCP_PORT, string $preferred_protocol = 'bolt'): EntityManager
+    public function createEntityManager(string $host = 'localhost', string $user = 'neo4j', string $password = 'neo4j', int $httpPort = 7474, int $boltPort = BoltDriver::DEFAULT_TCP_PORT, string $protocol = self::BOLT_PROTOCOL): EntityManager
     {
         $dsn = sprintf(
             '%s://%s:%s@%s:%d',
-            function_exists('bcmod') ? 'bolt' : 'http',
+            function_exists('bcmod') && $protocol === self::BOLT_PROTOCOL ? self::BOLT_PROTOCOL : self::HTTP_PROTOCOL,
             $user,
             $password,
             $host,
-            function_exists('bcmod') && $preferred_protocol === 'bolt' ? $boltPort : $httpPort
+            function_exists('bcmod') && $protocol === self::BOLT_PROTOCOL ? $boltPort : $httpPort
         );
 
         return EntityManager::create($dsn);
