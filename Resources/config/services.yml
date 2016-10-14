@@ -4,6 +4,7 @@ parameters:
     neo4j.database_bolt_port: 7687
     neo4j.database_user: neo4j
     neo4j.database_password: neo4j
+    neo4j.protocol: bolt
 
 services:
     neo4j.manager.factory:
@@ -18,3 +19,4 @@ services:
             - "%neo4j.database_password%"
             - "%neo4j.database_http_port%"
             - "%neo4j.database_bolt_port%"
+            - "%neo4j.protocol%"
