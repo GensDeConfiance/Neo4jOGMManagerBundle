@@ -2,6 +2,7 @@
 
 namespace GensDeConfiance\Neo4jOGMManagerBundle\Factory;
 
+use GraphAware\Bolt\Driver as BoltDriver;
 use GraphAware\Neo4j\OGM\EntityManager;
 
 class Neo4jManagerFactory
@@ -15,7 +16,7 @@ class Neo4jManagerFactory
      *
      * @return EntityManager
      */
-    public function createEntityManager(string $host, string $user, string $password, int $httpPort, int $boltPort, string $preferred_protocol = 'bolt'): EntityManager
+    public function createEntityManager(string $host, string $user, string $password, int $httpPort, int $boltPort = BoltDriver::DEFAULT_TCP_PORT, string $preferred_protocol = 'bolt'): EntityManager
     {
         $dsn = sprintf(
             '%s://%s:%s@%s:%d',
