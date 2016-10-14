@@ -16,7 +16,7 @@ class Neo4jManagerFactory
      *
      * @return EntityManager
      */
-    public function createEntityManager(string $host, string $user, string $password, int $httpPort, int $boltPort = BoltDriver::DEFAULT_TCP_PORT, string $preferred_protocol = 'bolt'): EntityManager
+    public function createEntityManager(string $host = 'localhost', string $user = 'neo4j', string $password = 'neo4j', int $httpPort = 7474, int $boltPort = BoltDriver::DEFAULT_TCP_PORT, string $preferred_protocol = 'bolt'): EntityManager
     {
         $dsn = sprintf(
             '%s://%s:%s@%s:%d',
