@@ -5,7 +5,7 @@ parameters:
     neo4j.database_user: neo4j
     neo4j.database_password: neo4j
     neo4j.protocol: bolt
-    neo4j.cache_dir: /tmp
+    neo4j.cache_dir: "%kernel.cache_dir%/neo4j"
 services:
     neo4j.manager.factory:
         class: GensDeConfiance\Neo4jOGMManagerBundle\Factory\Neo4jManagerFactory
