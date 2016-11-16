@@ -11,7 +11,7 @@
     "require": {
         "php": ">=7.0",
         "symfony/symfony": "^3.0",
-        "graphaware/neo4j-php-ogm": "^1.0@dev"
+        "graphaware/neo4j-php-ogm": "^1.0.0-beta21"
     },
     "suggest": {
         "ext-bcmath": "Needed to support Neo4j's Bolt protocol"
